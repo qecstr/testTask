@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 @Data
 public class phoneDTO {
     private String name;
-    private Date dateOfBirth;
+    private String dateOfBirth;
     private Long phoneNumber;
     private Long secondNumber;
     private Long id;

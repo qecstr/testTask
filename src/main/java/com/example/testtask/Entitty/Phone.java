@@ -1,20 +1,27 @@
 package com.example.testtask.Entitty;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
+@Table(name = "phone")
 public class Phone {
+    @Column(name = "name")
     private String name;
-    private Date dateOfBirth;
+    @Column(name = "date_of_birth")
+    private String dateOfBirth;
+    @Column(name = "phone_number")
     private Long phoneNumber;
+    @Column(name = "second_number")
     private Long secondNumber;
-    private Timestamp timeStamp;
+    @Column(name = "date_of_creation")
+    private Timestamp dateOfCreation;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
 
@@ -34,11 +41,11 @@ public class Phone {
         this.name = name;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -58,11 +65,11 @@ public class Phone {
         this.secondNumber = secondNumber;
     }
 
-    public Timestamp getTimeStamp() {
-        return timeStamp;
+    public Timestamp getDateOfCreation() {
+        return dateOfCreation;
     }
 
-    public void setTimeStamp(Timestamp timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setDateOfCreation(Timestamp dateOfCreation) {
+        this.dateOfCreation = dateOfCreation;
     }
 }
