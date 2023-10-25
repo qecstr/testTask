@@ -23,4 +23,4 @@ password:postgres
 
 3.2)запускаем сервисы в файле compose.yaml
 
-3.3)заходим в постман и импортируем 
+3.3)заходим в постман и импортируем testTask-postgreSql.postman_collection.json
