@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "758f6ad6-e28d-46c1-b5a7-787e0de2eca9",
+		"name": "testTask\\postgreSql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30717569"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/getById?id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getById?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/getByNumber?phoneNumber=87718186663",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getByNumber?phoneNumber=87718186663",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getByNumber"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "87718186663"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/updateById?id=1&name=Yessenov",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/updateById?id=1&name=Yessenov",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "Yessenov"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/updateByPhoneNumber?phoneNumber=87718106745&name=Zhivotnoye",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/updateByPhoneNumber?phoneNumber=87718106745&name=Zhivotnoye",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateByPhoneNumber"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "87718106745"
+						},
+						{
+							"key": "name",
+							"value": "Zhivotnoye"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/getList?limit=1&offset=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getList?limit=1&offset=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getList"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/deleteById?id=1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/deleteById?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deleteById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/deleteByPhoneNumber?phoneNumber=87718106745",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/deleteByPhoneNumber?phoneNumber=87718106745",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deleteByPhoneNumber"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "87718106745"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
