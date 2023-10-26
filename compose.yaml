@@ -15,4 +15,4 @@ services:
       - 'POSTGRES_PASSWORD=postgres'
       - 'POSTGRES_USER=postgres'
     ports:
-      - '5432'
+      - "58087:5432"

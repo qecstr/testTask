@@ -2,14 +2,16 @@ package com.example.testtask.Entitty;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Date;
-import java.sql.Timestamp;
 
-@Document
-@Entity
-@Table(name = "phoneMongo")
+import java.sql.Timestamp;
+import java.util.Date;
+
+@Data
+@Document(collection = "phoneMongoDB")
 public class PhoneMongoDB {
     @Column(name = "name")
     private String name;
@@ -20,19 +22,19 @@ public class PhoneMongoDB {
     @Column(name = "secondNumber")
     private Long secondNumber;
     @Column(name = "dateOfCreation")
-    private Timestamp dateOfCreation;
-    @Id
+    private Date dateOfCreation;
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "ID")
+    @Indexed(unique=true)
+    private Long ID;
 
-
-    public void setId(Long id) {
-        this.id = id;
+    public Long getID() {
+        return ID;
     }
 
-    public Long getId() {
-        return id;
+    public void setID(Long ID) {
+        this.ID = ID;
     }
 
     public String getName() {
@@ -67,11 +69,11 @@ public class PhoneMongoDB {
         this.secondNumber = secondNumber;
     }
 
-    public Timestamp getDateOfCreation() {
+    public Date getDateOfCreation() {
         return dateOfCreation;
     }
 
-    public void setDateOfCreation(Timestamp dateOfCreation) {
+    public void setDateOfCreation(Date dateOfCreation) {
         this.dateOfCreation = dateOfCreation;
     }
 }

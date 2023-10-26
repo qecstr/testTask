@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface postgresRepo extends JpaRepository<Phone,Long> {
 
-        Phone findPhoneById(Long id);
+
         Phone findPhoneByPhoneNumber(Long phoneNumber);
         Phone save(Phone p);
         void deleteById(Long id);
