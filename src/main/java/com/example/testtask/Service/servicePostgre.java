@@ -23,8 +23,8 @@ public class servicePostgre {
     @Autowired
     entityToDTO eTD;
     public phoneDTO findById(Long id){
-        Optional<Phone> p = pR.findById(id);
-        return eTD.mapToDTO(p.get());
+
+        return eTD.mapToDTO(pR.findPhoneById(id));
     }
     public phoneDTO findByPhoneNumber(Long phoneNumber){
      return eTD.mapToDTO(pR.findPhoneByPhoneNumber(phoneNumber));}

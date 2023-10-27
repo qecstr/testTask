@@ -11,6 +11,8 @@ import com.example.testtask.Service.serviceMongoDb;
 import com.example.testtask.Service.servicePostgre;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,8 +57,12 @@ public class mongoDbController {
         return mS.getList(f);
     }
     @PostMapping("/save")
-    public void save(@RequestParam phoneMongoDTO p){
+    @ResponseBody
+    public ResponseEntity<String> save(@RequestBody phoneMongoDTO p){
+            mS.save(p);
+        return new ResponseEntity<>("Phone is created", HttpStatus.CREATED);
 
-        mS.save(p);
+
+
     }
 }

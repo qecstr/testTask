@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Data
+
 @Document(collection = "phoneMongoDB")
 public class PhoneMongoDB {
     @Column(name = "name")
@@ -24,16 +25,16 @@ public class PhoneMongoDB {
     @Column(name = "dateOfCreation")
     private Date dateOfCreation;
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "ID")
     @Indexed(unique=true)
-    private Long ID;
+    private long ID;
 
-    public Long getID() {
+    public long getID() {
         return ID;
     }
 
-    public void setID(Long ID) {
+    public void setID(long ID) {
         this.ID = ID;
     }
 

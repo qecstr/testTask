@@ -8,5 +8,5 @@ public class phoneMongoDTO {
     private String dateOfBirth;
     private Long phoneNumber;
     private Long secondNumber;
-    private Long ID;
+    private long ID;
 }
